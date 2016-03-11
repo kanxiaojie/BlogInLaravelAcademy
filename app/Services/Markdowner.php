@@ -1,8 +1,8 @@
 <?php
 namespace App\Services;
 
-use Michelf\MarkdownExtra;
 use Michelf\SmartyPants;
+use Michelf\MarkdownExtra;
 
 class Markdowner
 {

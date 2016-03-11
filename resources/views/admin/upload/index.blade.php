@@ -6,7 +6,7 @@
         {{-- 顶部工具栏 --}}
         <div class="row page-title-row">
             <div class="col-md-6">
-                <h3 class="pull-left">Uploads </h3>
+                <h3 class="pull-left">Uploads</h3>
                 <div class="pull-left">
                     <ul class="breadcrumb">
                         @foreach ($breadcrumbs as $path => $disp)
@@ -34,14 +34,15 @@
 
                 <table id="uploads-table" class="table table-striped table-bordered">
                     <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Date</th>
-                        <th>Size</th>
-                        <th data-sortable="false">Actions</th>
-                    </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Date</th>
+                            <th>Size</th>
+                            <th data-sortable="false">Actions</th>
+                        </tr>
                     </thead>
+
                     <tbody>
 
                     {{-- 子目录 --}}

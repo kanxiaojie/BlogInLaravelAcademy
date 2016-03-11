@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\TagCreateRequest;
-use App\Http\Requests\TagUpdateRequest;
 use App\Tag;
 use Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagCreateRequest;
+use App\Http\Requests\TagUpdateRequest;
 
 class TagController extends Controller
 {
@@ -24,7 +23,7 @@ class TagController extends Controller
 
     public function index()
     {
-        $tags = Tag::all();
+        $tags = Tag::all();//获取数据
         return view('admin.tag.index')->withTags($tags);
     }
 
@@ -60,13 +59,14 @@ class TagController extends Controller
     /**
      * 修改
      * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit($id)
     {
         $tag = Tag::findOrFail($id);
         $data = ['id' => $id];
         foreach(array_keys($this->fields) as $field){
-            $data[$field] = old($field, $tag->$field);//不太明白
+            $data[$field] = old($field, $tag->$field);
         }
 
         return view('admin.tag.edit', $data);
@@ -99,6 +99,7 @@ class TagController extends Controller
         $tag = Tag::findOrFail($id);
         $tag->delete();
 
-        return redirect('/admin/tag')->withSuccess("The '$tag->tag' tag has been deleted");
+        return redirect('/admin/tag')
+                        ->withSuccess("The '$tag->tag' tag has been deleted.");
     }
 }

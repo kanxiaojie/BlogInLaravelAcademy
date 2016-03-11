@@ -31,7 +31,7 @@ function is_image($mimeType){
  */
 function checked($value){
     return $value?'checked' : '';
-}
+}//用于在视图的复选框和单选框中设置checked属性.
 
 function page_image($value = null)
 {
@@ -43,7 +43,7 @@ function page_image($value = null)
     }
 
     return $value;
-}
+}//用于上传图片的完整路径
 
 
 

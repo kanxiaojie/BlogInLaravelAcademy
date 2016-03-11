@@ -45,7 +45,7 @@ class Tag extends Model
 
     /**
      * Return the index layout to use for a tag
-     *
+     *layout 方法用于返回 Tag 的布局，如果 tag 不存在或者没有布局，返回默认值。
      * @param string $tag
      * @param string $default
      * @return string

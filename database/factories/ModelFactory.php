@@ -20,7 +20,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Post::class, function ($faker) {
+$factory->define(App\Post::class, function ($faker) {//??
     $images = ['about-bg.jpg', 'contact-bg.jpg', 'home-bg.jpg', 'post-bg.jpg'];
     $title = $faker->sentence(mt_rand(3, 10));
     return [

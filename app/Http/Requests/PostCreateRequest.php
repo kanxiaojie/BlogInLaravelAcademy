@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use Carbon\Carbon;
+use App\Http\Requests\Request;
 
 /**
  * @property mixed publish_date
@@ -38,6 +38,10 @@ class PostCreateRequest extends Request
         ];
     }
 
+    /**
+     * Return the fields and values to create a new post form
+     * @return array
+     */
     public function postFillData()
     {
         $published_at = new Carbon(

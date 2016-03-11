@@ -15,7 +15,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function(){
        Route::resource('admin/post', 'PostController', ['except' => 'show']);
        Route::resource('admin/tag', 'TagController', ['except' => 'show']);
-        Route::get('admin/upload', "UploadController@index");
+       Route::get('admin/upload', "UploadController@index");
 
         //文件上传路由
         Route::post('admin/upload/file', 'UploadController@uploadFile');

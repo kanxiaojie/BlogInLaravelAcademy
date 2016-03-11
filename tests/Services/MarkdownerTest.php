@@ -25,4 +25,12 @@ class MarkdownerTest extends TestCase
             ["Here's Johnny!", "<p>Here&#8217;s Johnny!</p>\n"],
         ];
     }
+
+    public function testSimpleParagraph()
+    {
+        $this->assertEquals(
+            "<p>test</p>\n",
+            $this->markdown->toHTML('test')
+        );
+    }
 }

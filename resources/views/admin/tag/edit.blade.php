@@ -43,7 +43,6 @@
                                         <i class="fa fa-times-circle"></i>
                                         Delete
                                     </button>
-
                                 </div>
                             </div>
 

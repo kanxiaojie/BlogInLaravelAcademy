@@ -1,4 +1,3 @@
-{{-- Navigation --}}
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
         {{-- Brand and toggle get grouped for better mobile display --}}
@@ -13,7 +12,6 @@
             <a class="navbar-brand" href="/">{{ config('blog.name') }}</a>
         </div>
 
-        {{-- Collect the nav links, forms, and other content for toggling --}}
         <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li>

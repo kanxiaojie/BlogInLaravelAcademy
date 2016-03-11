@@ -3,14 +3,13 @@
  * 实现文件上传管理列表
  */
 namespace App\Http\Controllers\Admin;
-
-use App\Http\Requests\UploadFileRequest;
-use App\Http\Requests\UploadNewFolderRequest;
-use App\Services\UploadsManager;
-use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Services\UploadsManager;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use App\Http\Requests\UploadFileRequest;
+use App\Http\Requests\UploadNewFolderRequest;
 
 class UploadController extends Controller
 {
@@ -86,6 +85,7 @@ class UploadController extends Controller
     /**
      * 删除目录
      * @param Request $request
+     * @return $this
      */
     public function deleteFolder(Request $request)
     {
